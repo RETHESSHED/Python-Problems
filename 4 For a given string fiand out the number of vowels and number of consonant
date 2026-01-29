@@ -1,0 +1,12 @@
+str="This is a python programming language it is highlevel"
+vowels=['a','e','i','o','u']
+vow=0
+cons=0
+
+for i in str:
+    if i.lower() in vowels:
+        vow+=1
+    elif (i>='a' and i<='z') or (i>='A' and i<='Z'):
+        cons+=1
+
+print("vowels = ",vow," and consonant = ",cons)
