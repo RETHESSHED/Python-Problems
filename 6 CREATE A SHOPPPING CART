@@ -4,19 +4,19 @@
 
 menu = {"Bread":45, "butter":87,"jam":32, "toast":56, "cheese":90}
 
-print("\n\n The list of items:\n- Items: Bread butter jam toast cheese\n- prices: 45,87,32,56,90\n- Enter the below menu to oder the item:\n- 1. add item to cart\n- 2. update\n- 3. delete\n- 4. view\n- 5. exit and print bill\n\n")
+print("\n\n The list of items:\n- Items: Bread butter jam toast cheese\n- prices: 45,87,32,56,90\n- Enter the below menu to order the item:\n- 1. add item to cart\n- 2. update\n- 3. delete\n- 4. view\n- 5. exit and print bill\n\n")
 
 cart={}
 num=1
 #menu1()
 while num:
 
-    print("\n Enter the menu number to oder the item")
+    print("\n Enter the menu number to order the item")
 
     num = int(input())
 
     if num == 1:
-        print("\n\n The list of items:\n- Items: Bread butter jam toast cheese\n- prices: 45,87,32,56,90\n-\n\n")
+        print("\n\n The list of items:\n- Items: Bread butter jam toast cheese\n- prices: 45,87,32,56,90")
 
         print("\n\nEnter the name of item to add in cart")
         name=input()
@@ -54,8 +54,12 @@ while num:
             print("\nItem is not present in cart")
 
     elif num==4:
-        for i,v in cart.items():
-            print("Item:", i, " quantity: ", v, " price: ",v*menu[i])
+        print("\n\n")
+        if cart:
+            for i,v in cart.items():
+                print("Item:", i, " quantity: ", v, " price: ",v*menu[i])
+        else:
+            print("Cart is empty")
 
         print("\n\n")
 
